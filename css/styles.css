@@ -1,0 +1,142 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+}
+
+.controls {
+    width: 250px;
+    padding: 10px;
+    background-color: #ddd;
+    overflow-y: auto;
+}
+
+.editor-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    overflow: auto;
+}
+
+.editor {
+    width: 375px;
+    height: 667px;
+    background-color: white;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.clickable-area {
+    position: absolute;
+    border: 2px dashed red;
+    background-color: rgba(255, 0, 0, 0.1);
+    cursor: move;
+}
+
+.clickable-area button {
+    position: absolute;
+    top: 0;
+    background: white;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.clickable-area .edit-button {
+    right: 25px;
+    font-size: 12px;
+}
+
+.clickable-area .edit-button::before {
+    content: "🔗";
+    margin-right: 3px;
+}
+
+.clickable-area .delete-button {
+    right: 0;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-buttons {
+    margin-top: 15px;
+    text-align: right;
+}
+
+.modal-buttons button {
+    display: inline-block;
+    width: auto;
+    margin-left: 10px;
+}
+
+.resize-handle {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    cursor: se-resize;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
